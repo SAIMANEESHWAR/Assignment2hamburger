@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet"  type="image/x-icon" href="img_avatar1.png">
+<meta charset="utf-8">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    table,th,td{
+                border:1px solid black;
+                border-collapse: collapse;
+            
+            }
+            th
+            {
+                background-color: lightblue;
+            }
+            #sai
+            {
+                
+  background-color: #D6EEEE;
+                
+            }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+   
+  overflow: hidden;
+  background-color:#333;
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav a:hover {
+  background-color:white;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: white;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display:inline-block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav  bg-dark  fixed-top" id="myTopnav" >
+  <a class="nav-link active" href="#home">
+    <img src="images/img_avatar1.png" alt="Logo" style="width:40px;" class="rounded-pill  "> HOME
+</a>
+<a class="nav-link  " href="#acad">
+    <img src="data:image/jpeg;base64,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" alt="Logo" style="width:40px;" class="rounded-pill"> ACADEMICS
+</a>
+<a class="nav-link " href="#tech">
+    <img src="images/skillspic.jpg" alt="Logo" style="width:40px;" class="rounded-pill"> TECHNICAL SKILLS
+</a>
+<a class="nav-link " href="#projects">
+    <img src="images/projectpic.jpg" alt="Logo" style="width:40px;" class="rounded-pill">PROJECTS
+</a>
+<a class="nav-link disabled " href="">
+    <img src="data:image/png;base64,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" alt="Logo" style="width:40px;color:white;" class="rounded-pill"> ACHIEVEMENTS
+</a>
+<a class="nav-link " href="#contact">
+    <img src="images/home pic.png" style="width:40px"> CONTACT US
+</a> 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <form class="d-flex float-end mt-3">
+    <input class="form-control me-2" type="text" placeholder="Search">
+    <button class="btn btn-primary" type="button">Search</button>
+</form>
+</div>
+
+<div class="container-fluid " style="padding-left:16px">
+    
+        
+        <p id="home" class="display-3 mt-3"><br>SIDDAPURAM SAI MANEESHWAR
+        <img src="images/saiimg.jpg" width="250px" height="250px" class="rounded-circle float-end " style=" border: 2px solid burlywood;" ></p>
+        <p class="display-6 mt-3">siddapuramsaimaneeswar@gmail.com<br><br></p>
+        <hr>
+        <h3 id="acad"><strong>Carrer Objective</strong></h3>
+        <p>Seeking a responsible carrer opportunity in the field of computer Science where I can utilize my logical and technical skills <br>towards personal and professional development my logical and professionaldevlopment</p>
+        <h3 class="display-4" ><strong>ACADEMICS<br></strong></h3> 
+        <table  style="width: 100%; border: 2px solid black;">
+            <tr style="height: 40px;">
+                <th style="width:34%; text-align: left;"><p>course Details</p></th>
+                <th style="width: 31% ; text-align: left;">Institution</th>
+                <th style="width: 14% ; text-align: left;">university/Board</th>
+                <th style="width: 14% ; text-align: left;">Year of passing</th>
+                <th style="width: 7% ; text-align: left;">CGPA</th>
+            </tr>
+            <tr style="height: 30px;">
+                <td><p>Bachelor of the technology(computer science)</p></td>
+                <td>Keshav Memorial Institute of Technology</td>
+                <td>JNTUH</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td><p>Intermediate-MPC</p></td>
+                <td>Narayana Junior Collage,Ts</td>
+                <td>-</td>
+                <td>2021</td>
+                <td>97.4%</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td><p>School of Secondary Certificate</p></td>
+                <td>Keshava Reddy School</td>
+                <td>ssc</td>
+                <td>2019</td>
+                <td>9.5<br></td>
+            </tr>
+
+    </table>
+    <h3 id="tech" style="margin-top: 30px;"class="display-4"><strong><br> TECHNICAL SKILLS<br></strong></h3>
+    <h4>programing languages:</h4>
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>JAVA</li>
+        <li>python</li>
+        <li>HTML</li>
+    </ul>
+    <h4>data bases:</h4>
+    <ul>
+        <li>-</li>
+    </ul>
+    <h4>Web Technologies:</h4>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>BOOTSTRAP<br></li>
+    </ul>
+    <h3 id="projects" class="display-4" ><strong>PROJECTS</strong></h3>
+    <ul>
+        <li>TIC-TAC-TOE</li>
+        <li>ROCK-PAPER-SCISSOR</li>
+        <li>WORD-GUESSING</li>
+        <li>TELL ME A DATE I WILL TELL U THE DAY</li>
+        <li>LEVEL COMPARE OF CRICKETERS<br></li>
+        
+    </ul>
+
+    <h3 class="display-4" id="contact"><strong>CONTACT:<br></strong></h3>
+    <h5><strong>MOBILE NUMBER:</strong>9391582839</h5>
+
+    <h5><strong>E-MAIL: </strong><a href="mailto:siddapuramsaimaneeswar@gmail.com" >siddapuramsaimaneeswar@gmail.com<br><br><br><br><br><br><br><br><br></ahref></h5>
+
+
+
+
+
+
+    
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav fixed-top bg-dark") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav fixed-top bg-dark";
+  }
+}
+</script>
+
+</body>
+</html>
